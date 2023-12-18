@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================================Title=================================== -->
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/ico.png" type="image/x-icon" />
+    <!-- ?==============================fonts====================================? -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- ^======================fontAsesome===================================== -->
+    <link rel="stylesheet" href="Css/all.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- *========================favicon=======================================* -->
+    <link rel="shortcut icon" href="Images/.png" type="image/x-icon" />
+    <!-- !=================BootStarp(css)======================================= -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/fonts.css" />
+    <!-- &======================style===========================================& -->
+    <link rel="stylesheet" href="Css/mediaqueries.css" />
+    <link rel="stylesheet" href="Css/Animation.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <body>
+    <div class="form d-flex p-5 flex-column">
+      <div class="header"><h1 class="text-center m-1">Bookmarker</h1></div>
+      <div class="container">
+        <label for="bookmarkname" class="mb-1"> Bookmark Name</label>
+        <input
+          type="text"
+          id="bookmarkname"
+          class="form-control"
+          placeholder="Bookmark Name"
+        />
+        <label for="bookmarkurl" class="mb-1"> Bookmark Url</label>
+        <input
+          type="text"
+          id="bookmarkurl"
+          class="form-control"
+          placeholder="Bookmark Url"
+        />
+        <button class="btn btn-success" onclick="insert()">Submit</button>
+        <div class="tableContent shadow">
+          <table id="bookmarkTable" class="table caption-top bg-light">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website</th>
+                <th scope="col">Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ?=======Script(js)================== -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/site.js"></script>
+    <!--? ===================================== -->
+  </body>
+</html>

@@ -1,0 +1,5 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Montserrat,sans-serif}
+.form{height:100vh;background-image:url(../images/mystical.jpg);background-repeat:no-repeat;background-size:cover;color:#fff}
+label{font-weight:300;font-size:18px}
+input{margin-bottom:20px}
