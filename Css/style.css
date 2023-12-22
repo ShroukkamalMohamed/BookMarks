@@ -1,5 +1,5 @@
 *{margin:0;padding:0;box-sizing:border-box}
-body{background-color:#f7ecde;font-family:Montserrat,sans-serif}
+body{background-color:#f7ecde;font-family:Montserrat,sans-serif;position:relative}
 .header h1{position:relative;font-size:40px;font-family:Pacifico,cursive}
 .header h1::before{position:absolute;content:"";height:20px;width:20%;background-color:#fec260;bottom:0;z-index:-1}
 .header h1:hover::before{height:50%}
@@ -12,3 +12,6 @@ h2{text-align:center;font-family:Righteous,cursive;font-size:25px;background-ima
 #visitbtn{background-color:#9eb23b;color:#fff}
 #deletebtn{background-color:red;color:#fff}
 .titlecircle{display:block;width:20px;height:20px}
+.Addmodal .modal-dialog,.deletemodal .modal-dialog{position:absolute;width:500px;top:30%;left:30%;text-align:center;color:#3ca55c}
+.modal-dialog i{color:red}
+#btnclose,#btnclosedeleteMassege ,#btncloseAddMassege{background-color:red}

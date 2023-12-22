@@ -5,10 +5,13 @@ var bookmarkTableBody = document.getElementById("bookmarkTableBody");
 var deletebtn = document.getElementById("deletebtn");
 var visitbtn = document.getElementById("visitbtn");
 var btnsubmit = document.getElementById("btnsubmit");
-var bookmarkname = document.getElementById("bookmarkname");
+var bookmarkname = document.getElementById("bookmarkname"); 
+var deletemodal = document.getElementById('deletemodal');
+var btnclosedeleteMassege = document.getElementById('btnclosedeleteMassege');
+var Addmodal = document.getElementById('Addmodal');
+var btncloseAddMassege = document.getElementById('btncloseAddMassege');
 var bookmarkurl = document.getElementById("bookmarkurl");
 var modal = document.getElementById('modal');
-
 // *====================>>>>>Variables<<<<<<<<<======================
 var bookMarkList = [{ bookMarkName: `Youtube`, bookMarkUrl: `https://www.youtube.com/` }];
 DisplayBookMarks(bookMarkList);
@@ -73,6 +76,8 @@ btnsubmit.addEventListener("click", function insertNewSite() {
         bookMarkList.push(bookmark);
         DisplayBookMarks(bookMarkList);
         clear();
+        Addmodal.classList.remove("d-none");
+        Addmodal.classList.add("d-flex");
     }
     else {
         modal.classList.remove("d-none");
@@ -84,6 +89,16 @@ btnclose.addEventListener("click", function () {
     modal.classList.add("d-none");
 
 })
+btnclosedeleteMassege.addEventListener("click", function () {
+    deletemodal.classList.remove("d-flex");
+    deletemodal.classList.add("d-none");
+
+})
+btncloseAddMassege.addEventListener("click", function () {
+    Addmodal.classList.remove("d-flex");
+    Addmodal.classList.add("d-none");
+
+})
 function visitSiteClick(index) {
     var url = (bookMarkList[index].bookMarkUrl);
     window.open(url, '_blank').focus();
@@ -92,7 +107,8 @@ function deleteClick(index) {
     console.log(bookMarkList[index]);
     bookMarkList.splice(index, 1);
     DisplayBookMarks(bookMarkList);
-    console.log(bookMarkList);
+    deletemodal.classList.remove("d-none");
+    deletemodal.classList.add("d-flex");
 }
 
 
