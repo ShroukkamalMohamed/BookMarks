@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ================================Title=================================== -->
     <title>Bookmark</title>
-    <link rel="shortcut icon" href="images/ico.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
     <!-- ?==============================fonts====================================? -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <link
@@ -33,50 +41,114 @@
   <body>
     <div class="form d-flex p-5 flex-column">
       <div class="header"><h1 class="text-center m-1">Bookmarker</h1></div>
+      <hr />
       <div class="container">
-        <label for="bookmarkname" class="mb-1"> Bookmark Name</label>
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <label for="bookmarkname" class="mb-1">
+          <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+        >
         <input
           type="text"
           id="bookmarkname"
           class="form-control"
           placeholder="Bookmark Name"
         />
-        <label for="bookmarkurl" class="mb-1"> Bookmark Url</label>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Site name must contain at least 3 characters
+        </div>
+        <label for="bookmarkurl" class="mb-1">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL</label
+        >
         <input
-          type="text"
-          id="bookmarkurl"
-          class="form-control"
           placeholder="Bookmark Url"
+          class="form-control"
+          id="bookmarkurl"
         />
-        <button class="btn btn-success" onclick="insert()">Submit</button>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Site URL must be a valid one
+        </div>
+        <button id="btnsubmit" class="btn mb-2 pe-4 text-center">Submit</button>
+        <hr />
+
         <div class="tableContent shadow">
-          <table id="bookmarkTable" class="table caption-top bg-light">
+          <table class="table caption-top bg-light">
             <thead>
-              <tr>
-                <th scope="col">Index</th>
-                <th scope="col">Website</th>
-                <th scope="col">Name</th>
-                <th scope="col">Visit</th>
-                <th scope="col">Delete</th>
-              </tr>
+              <th scope="col">Index</th>
+              <th scope="col">Website</th>
+              <th scope="col">Url</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
             </thead>
+            <tbody id="bookmarkTableBody"></tbody>
           </table>
-          <div class="row">
-            <div class="col-md-12">
-              <div
-                id="bookmarkCard"
-                style="position: relative"
-                class=" d-flex align-items-center justify-content-center"
-              ></div>
-            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- !=======================Modal========================= -->
+    <div class="modal" id="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5 d-flex justify-content-center"
+              id="exampleModalLabel"
+            >
+              <span
+                class="rounded-circle me-2 titlecircle"
+                style="background-color: #f15f5d"
+              ></span>
+              <span
+                class="rounded-circle me-2 titlecircle"
+                style="background-color: #febe2e"
+              ></span>
+              <span
+                class="rounded-circle me-2 titlecircle"
+                style="background-color: #4db748"
+              ></span>
+            </h1>
+            <button
+              type="button"
+              id="btnclose"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul style="list-style-type: none">
+              <li>
+                Site Name or Url is not valid, Please follow the rules below:
+              </li>
+              <li>
+                <i
+                  class="fa-regular fa-circle-right p-2"
+                  style="color: #bb4120"
+                ></i>
+                Site name must contain at least 3 characters
+              </li>
+              <li>
+                <i
+                  class="fa-regular fa-circle-right p-2"
+                  style="color: #bb4120"
+                ></i>
+                Site URL must be a valid one
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- !=====================end of Modal=========================== -->
     <!-- ?=======Script(js)================== -->
     <script src="JS/bootstrap.bundle.min.js"></script>
-    <script src="JS/site.js"></script>
+    <script src="JS/site.js" type="text/javascript" defer></script>
     <!--? ===================================== -->
   </body>
 </html>

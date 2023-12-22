@@ -1,29 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: Montserrat, sans-serif;
-}
-.form {
-  height: 100vh;
-  background-image: url(../images/mystical.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-}
-label {
-  font-weight: 300;
-  font-size: 18px;
-}
-input {
-  margin-bottom: 20px;
-}
-h4 {
-  z-index: 99;
-  position: absolute;
-  align-items: center;
-  margin: auto;
-  color: black;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background-color:#f7ecde;font-family:Montserrat,sans-serif}
+.header h1{position:relative;font-size:40px;font-family:Pacifico,cursive}
+.header h1::before{position:absolute;content:"";height:20px;width:20%;background-color:#fec260;bottom:0;z-index:-1}
+.header h1:hover::before{height:50%}
+.form{height:100vh}
+label{font-weight:500;font-size:18px}
+input{margin-bottom:20px}
+h4{z-index:99;position:absolute;align-items:center;margin:auto;color:#000}
+h2{text-align:center;font-family:Righteous,cursive;font-size:25px;background-image:linear-gradient(to right,#3ca55c,#b5ac49);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#btnsubmit{background-color:#d1512d;color:#fff;display:block;left:50%;margin-block:5px;position:relative}
+#visitbtn{background-color:#9eb23b;color:#fff}
+#deletebtn{background-color:red;color:#fff}
+.titlecircle{display:block;width:20px;height:20px}
